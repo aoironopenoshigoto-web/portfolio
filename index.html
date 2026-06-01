@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>青筆 - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 言語切り替えボタン（左上固定） -->
+    <button id="langToggle" class="lang-toggle" aria-label="言語を切り替える">EN</button>
+
+    <!-- スマホ・ハーフスクリーン用：メニューボタン -->
+    <button class="menu-toggle" id="menuToggle" aria-label="メニューを開閉する">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+    </button>
+
+    <!-- スマホ・ハーフスクリーン用：フルスクリーンメニュー -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-name">
+            <h1><span class="ja">青筆</span><span class="en">Aoironopen</span></h1>
+            <p>Illustrator</p>
+        </div>
+        <nav class="mobile-toc">
+            <ul>
+                <li><a href="#top" class="mobile-link">Top</a></li>
+                <li><a href="#gallery" class="mobile-link">Gallery</a>
+                    <ul class="sub-menu">
+                        <li><a href="#work" class="mobile-link">Work</a></li>
+                        <li><a href="#hobby" class="mobile-link">Hobby</a></li>
+                    </ul>
+                </li>
+                <li><a href="#about" class="mobile-link">About</a></li>
+                <li><a href="#price" class="mobile-link">Price</a></li>
+                <li><a href="#contact" class="mobile-link">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- PC用：左側の余白エリア -->
+    <aside class="sidebar-left">
+        <div class="name-container">
+            <h1><span class="ja">青筆</span><span class="en">Aoironopen</span></h1>
+            <p>Illustrator</p>
+        </div>
+    </aside>
+
+    <!-- 中央：スクロールする主文エリア -->
+    <main class="content-center" id="top">
+        
+        <header class="center-header">
+            <h1><span class="ja">青筆</span><span class="en">Aoironopen</span></h1>
+            <p>Illustrator</p>
+        </header>
+
+        <section id="gallery" class="section">
+            <h2>Gallery</h2>
+            <h3 id="work">Work</h3>
+<div class="gallery-grid">
+
+        <div class="work-item">
+            <img src="images/compressed/work/HGL6X_UaIAEFkve.jpg" alt="Workの画像" oncontextmenu="return false;" draggable="false">
+        </div>
+        
+        <div class="work-item">
+            <img src="images/compressed/work/HGqz4S0a4AA1hRT.jpg" alt="Workの画像" oncontextmenu="return false;" draggable="false">
+        </div>
+        
+        <div class="work-item">
+            <img src="images/compressed/work/HHeT4YVa0AA2ZrO.jpg" alt="Workの画像" oncontextmenu="return false;" draggable="false">
+        </div>
+        
+        <div class="work-item">
+            <img src="images/compressed/work/HIRztclawAABc3B.jpg" alt="Workの画像" oncontextmenu="return false;" draggable="false">
+        </div>
+        
+        <div class="work-item">
+            <img src="images/compressed/work/HJKdN9qboAAG6ho.jpg" alt="Workの画像" oncontextmenu="return false;" draggable="false">
+        </div>
+        </div>
+<h3 id="hobby">Hobby</h3>
+<div class="gallery-grid">
+
+        <div class="work-item">
+            <img src="images/compressed/hobby/1.jpg" alt="Hobbyの画像" oncontextmenu="return false;" draggable="false">
+        </div>
+        
+        <div class="work-item">
+            <img src="images/compressed/hobby/2.jpg" alt="Hobbyの画像" oncontextmenu="return false;" draggable="false">
+        </div>
+        
+        <div class="work-item">
+            <img src="images/compressed/hobby/3.jpg" alt="Hobbyの画像" oncontextmenu="return false;" draggable="false">
+        </div>
+        
+        <div class="work-item">
+            <img src="images/compressed/hobby/4.jpg" alt="Hobbyの画像" oncontextmenu="return false;" draggable="false">
+        </div>
+        
+        <div class="work-item">
+            <img src="images/compressed/hobby/HJUva8yb0AATQRU.jpg" alt="Hobbyの画像" oncontextmenu="return false;" draggable="false">
+        </div>
+        
+        <div class="work-item">
+            <img src="images/compressed/hobby/HJpgY0FaQAAusFa.jpg" alt="Hobbyの画像" oncontextmenu="return false;" draggable="false">
+        </div>
+        </div>
+
+        </section>
+
+        <section id="about" class="section">
+            <h2>About</h2>
+            <p>
+                <span class="ja">キャラクターイラストを中心に制作しています。「かわいく」がメインです。本ページには載せることはできませんが、企業案件の経験もございます。お気軽にご相談ください！</span>
+                <span class="en">I mainly create character illustrations with a focus on 'cute' aesthetics. Though I cannot post them here, I also have experience with corporate commissions. Please feel free to reach out!</span>
+            </p>
+            <h3 class="tools-head">Tools</h3>
+            <p>Clip Studio Paint</p>
+        </section>
+
+        <!-- 料金表セクション -->
+        <section id="price" class="section">
+            <h2>Price</h2>
+            <p class="price-desc">
+                <span class="ja">直接のご依頼（メール）における基本料金の目安です。<br>項目をクリックすると、装飾の量などによる詳細な参考価格をご確認いただけます。</span>
+                <span class="en">Estimated base rates for direct requests (via email).<br>Click each item to view detailed reference prices based on the amount of decoration.</span>
+            </p>
+            <!-- Pythonで生成された料金表（アコーディオン）がここに入ります -->
+            <div class="price-accordion">
+
+        <details class="price-item">
+            <summary class="price-summary">
+                <span class="price-title">
+                    <span class="ja">SNSアイコン</span>
+                    <span class="en">SNS Icon</span>
+                </span>
+                <span class="price-amount">
+                    <span class="ja">¥ 5,000 〜</span>
+                    <span class="en">From ¥5,000</span>
+                </span>
+            </summary>
+            <div class="price-details">
+        
+                <p class="reference-note">
+                    <span class="ja">※以下の詳細料金はあくまで参考目安です。ご要望に合わせてお見積もりいたします。</span>
+                    <span class="en">*The detailed prices below are for reference only. Quotes will be adjusted based on your requests.</span>
+                </p>
+            <ul>
+
+                    <li>
+                        <span class="detail-label"><span class="ja">装飾 少（シンプルな服装など）</span><span class="en">Simple details (basic clothes, etc.)</span></span>
+                        <span class="detail-price"><span class="ja">+ ¥ 0</span><span class="en">+ ¥0</span></span>
+                    </li>
+                
+                    <li>
+                        <span class="detail-label"><span class="ja">装飾 中（複雑な髪型・小物など）</span><span class="en">Moderate details (complex hair, accessories)</span></span>
+                        <span class="detail-price"><span class="ja">+ ¥ 1,000 〜</span><span class="en">+ ¥1,000~</span></span>
+                    </li>
+                
+                    <li>
+                        <span class="detail-label"><span class="ja">装飾 多（フリル・甲冑・武器など）</span><span class="en">Heavy details (frills, armor, weapons)</span></span>
+                        <span class="detail-price"><span class="ja">+ ¥ 2,500 〜</span><span class="en">+ ¥2,500~</span></span>
+                    </li>
+                </ul>
+
+            </div>
+        </details>
+        
+        <details class="price-item">
+            <summary class="price-summary">
+                <span class="price-title">
+                    <span class="ja">キャラクター立ち絵</span>
+                    <span class="en">Character Full-body Art</span>
+                </span>
+                <span class="price-amount">
+                    <span class="ja">¥ 15,000 〜</span>
+                    <span class="en">From ¥15,000</span>
+                </span>
+            </summary>
+            <div class="price-details">
+        
+                <p class="reference-note">
+                    <span class="ja">※以下の詳細料金はあくまで参考目安です。ご要望に合わせてお見積もりいたします。</span>
+                    <span class="en">*The detailed prices below are for reference only. Quotes will be adjusted based on your requests.</span>
+                </p>
+            <ul>
+
+                    <li>
+                        <span class="detail-label"><span class="ja">装飾 少（制服・シンプルな私服）</span><span class="en">Simple details (uniforms, basic clothes)</span></span>
+                        <span class="detail-price"><span class="ja">+ ¥ 0</span><span class="en">+ ¥0</span></span>
+                    </li>
+                
+                    <li>
+                        <span class="detail-label"><span class="ja">装飾 中（ファンタジー衣装・小物複数）</span><span class="en">Moderate details (fantasy outfits, some accessories)</span></span>
+                        <span class="detail-price"><span class="ja">+ ¥ 3,000 〜</span><span class="en">+ ¥3,000~</span></span>
+                    </li>
+                
+                    <li>
+                        <span class="detail-label"><span class="ja">装飾 多（重装甲・アイドル衣装など）</span><span class="en">Heavy details (heavy armor, idol outfits, etc.)</span></span>
+                        <span class="detail-price"><span class="ja">+ ¥ 7,000 〜</span><span class="en">+ ¥7,000~</span></span>
+                    </li>
+                </ul>
+
+            </div>
+        </details>
+        
+        <details class="price-item">
+            <summary class="price-summary">
+                <span class="price-title">
+                    <span class="ja">一枚絵（背景あり）</span>
+                    <span class="en">Illustration (with Background)</span>
+                </span>
+                <span class="price-amount">
+                    <span class="ja">¥ 25,000 〜</span>
+                    <span class="en">From ¥25,000</span>
+                </span>
+            </summary>
+            <div class="price-details">
+        
+                <p class="reference-note">
+                    <span class="ja">※以下の詳細料金はあくまで参考目安です。ご要望に合わせてお見積もりいたします。</span>
+                    <span class="en">*The detailed prices below are for reference only. Quotes will be adjusted based on your requests.</span>
+                </p>
+            <ul>
+
+                    <li>
+                        <span class="detail-label"><span class="ja">装飾 少 ＋ 背景シンプル（単色・柄など）</span><span class="en">Simple details + Simple BG (solid color/pattern)</span></span>
+                        <span class="detail-price"><span class="ja">+ ¥ 0</span><span class="en">+ ¥0</span></span>
+                    </li>
+                
+                    <li>
+                        <span class="detail-label"><span class="ja">装飾 中 ＋ 背景 中（室内・自然風景など）</span><span class="en">Moderate details + Standard BG (room, nature)</span></span>
+                        <span class="detail-price"><span class="ja">+ ¥ 5,000 〜</span><span class="en">+ ¥5,000~</span></span>
+                    </li>
+                
+                    <li>
+                        <span class="detail-label"><span class="ja">装飾 多 ＋ 背景 複雑（街並み・建物など）</span><span class="en">Heavy details + Complex BG (cityscapes, architecture)</span></span>
+                        <span class="detail-price"><span class="ja">+ ¥ 15,000 〜</span><span class="en">+ ¥15,000~</span></span>
+                    </li>
+                </ul>
+
+            </div>
+        </details>
+        
+        <details class="price-item">
+            <summary class="price-summary">
+                <span class="price-title">
+                    <span class="ja">商用利用・著作権譲渡</span>
+                    <span class="en">Commercial Use / Copyright</span>
+                </span>
+                <span class="price-amount">
+                    <span class="ja">要相談</span>
+                    <span class="en">Negotiable</span>
+                </span>
+            </summary>
+            <div class="price-details">
+        
+                <p style="margin-top:0;">
+                    <span class="ja">グッズ化、配信での収益化、企業様からのご依頼など、用途に合わせてお見積もりいたしますので、まずはご相談ください。</span>
+                    <span class="en">Please consult with me if you plan to monetize via merchandise, streaming, or if you are a corporate client. We will provide a custom quote based on your usage.</span>
+                </p>
+            
+            </div>
+        </details>
+        </div>
+
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p style="text-align: center;">
+                <span class="ja">ご依頼やお問い合わせは、以下のプラットフォームまたはメールよりお願いいたします。</span>
+                <span class="en">For requests and inquiries, please use the platforms below or email me directly.</span>
+            </p>
+            
+            <div class="contact-links">
+                <a href="https://skeb.jp/@aoiro_no_pen" target="_blank" rel="noopener noreferrer" class="contact-btn">
+                    <span class="ja"><span class="platform-name">Skeb</span> でリクエスト</span>
+                    <span class="en">Request via <span class="platform-name">Skeb</span></span>
+                </a>
+                <a href="https://tsunagu.cloud/users/aoiro_no_pen" target="_blank" rel="noopener noreferrer" class="contact-btn">
+                    <span class="ja"><span class="platform-name">つなぐ</span> で相談する</span>
+                    <span class="en">Consult via <span class="platform-name">Tsunagu</span></span>
+                </a>
+                <a href="mailto:aoironopen@gmail.com" class="contact-btn">
+                    <span class="ja"><span class="platform-name">Email</span> でのお問い合わせ</span>
+                    <span class="en">Contact via <span class="platform-name">Email</span></span>
+                </a>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 <span class="ja">青筆</span><span class="en">Aoironopen</span>. All rights reserved.</p>
+        </footer>
+
+    </main>
+
+    <!-- PC用：右側の余白エリア -->
+    <aside class="sidebar-right">
+        <nav class="toc-menu">
+            <ul>
+                <li><a href="#top">Top</a></li>
+                <li>
+                    <a href="#gallery">Gallery</a>
+                    <ul class="sub-menu">
+                        <li><a href="#work">Work</a></li>
+                        <li><a href="#hobby">Hobby</a></li>
+                    </ul>
+                </li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#price">Price</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // 画像の縦横判定
+            document.querySelectorAll('.work-item img').forEach(img => {
+                img.onload = function() {
+                    if (this.naturalWidth > this.naturalHeight) {
+                        this.parentElement.classList.add('landscape');
+                    } else {
+                        this.parentElement.classList.add('portrait');
+                    }
+                };
+                if (img.complete) img.onload();
+            });
+
+            // 言語切り替えスクリプト
+            const langToggle = document.getElementById('langToggle');
+            const defaultTitle = "青筆 - Portfolio";
+            const englishTitle = "Aoironopen - Portfolio";
+
+            if (localStorage.getItem('lang') === 'en') {
+                document.body.classList.add('english-mode');
+                langToggle.textContent = 'JP';
+                document.title = englishTitle;
+            }
+
+            langToggle.addEventListener('click', () => {
+                document.body.classList.toggle('english-mode');
+                if (document.body.classList.contains('english-mode')) {
+                    langToggle.textContent = 'JP';
+                    localStorage.setItem('lang', 'en'); 
+                    document.title = englishTitle;
+                } else {
+                    langToggle.textContent = 'EN';
+                    localStorage.setItem('lang', 'ja'); 
+                    document.title = defaultTitle;
+                }
+            });
+
+            // レイアウト判定＆メニュー開閉
+            const menuToggle = document.getElementById('menuToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            function updateLayout() {
+                const screenWidth = window.screen.width;
+                const windowWidth = window.innerWidth;
+                const windowHeight = window.innerHeight;
+                const isHalfScreen = windowWidth <= screenWidth * 0.55;
+                const isTabletOrMobile = windowWidth <= 1024;
+                const isPortrait = windowWidth < windowHeight;
+
+                if (isHalfScreen || isTabletOrMobile || isPortrait) {
+                    document.body.classList.add('is-mobile-layout');
+                } else {
+                    document.body.classList.remove('is-mobile-layout');
+                    menuToggle.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            }
+
+            window.addEventListener('resize', updateLayout);
+            updateLayout();
+
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+                
+                if (mobileMenu.classList.contains('active')) {
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    document.body.style.overflow = '';
+                }
+            });
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menuToggle.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+
+            // 右クリック・画像保存対策
+            document.addEventListener('contextmenu', function(e) {
+                if (e.target.tagName === 'IMG') {
+                    e.preventDefault();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
