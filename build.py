@@ -163,11 +163,11 @@ def build_portfolio():
         "price_desc_en": "Estimated base rates for direct requests (via email).<br>Click each item to view detailed reference prices based on the amount of decoration.",
         "contact_desc_ja": "ご依頼やお問い合わせは、以下のプラットフォームまたはメールよりお願いいたします。",
         "contact_desc_en": "For requests and inquiries, please use the platforms below or email me directly.",
-        "tools": "Clip Studio Paint",
-        "email": "aoironopen@gmail.com",
+        "tools": "Clip Studio Paint Version 5. 0. 2",
+        "email": "aoironopen.oshigoto@gmail.com",
         "skeb": "https://skeb.jp/@aoiro_no_pen",
         "tsunagu": "https://tsunagu.cloud/users/aoiro_no_pen",
-        
+        "X": "https://X.com/aoiro_no_pen",
         # HTMLブロックの生成
         "gallery_content": generate_gallery_block(work_images, "work", "Work") + 
                            generate_gallery_block(hobby_images, "hobby", "Hobby"),

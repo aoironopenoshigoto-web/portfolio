@@ -90,18 +90,31 @@
             </p>
             
             <div class="contact-links">
+                <a href="{{ X }}" target="_blank" rel="noopener noreferrer" class="contact-btn">
+                    <span class="ja"><span class="platform-name">X (Twitter)</span> を見る</span>
+                    <span class="en">View <span class="platform-name">X (Twitter)</span></span>
+                </a>
+
                 <a href="{{ skeb }}" target="_blank" rel="noopener noreferrer" class="contact-btn">
                     <span class="ja"><span class="platform-name">Skeb</span> でリクエスト</span>
                     <span class="en">Request via <span class="platform-name">Skeb</span></span>
                 </a>
+                
                 <a href="{{ tsunagu }}" target="_blank" rel="noopener noreferrer" class="contact-btn">
                     <span class="ja"><span class="platform-name">つなぐ</span> で相談する</span>
                     <span class="en">Consult via <span class="platform-name">Tsunagu</span></span>
                 </a>
+                
                 <a href="mailto:{{ email }}" class="contact-btn">
                     <span class="ja"><span class="platform-name">Email</span> でのお問い合わせ</span>
                     <span class="en">Contact via <span class="platform-name">Email</span></span>
                 </a>
+
+                <div class="email-display">
+                    <span class="ja">アドレスはこちら：</span>
+                    <span class="en">Or copy the address directly: </span><br>
+                    <span class="email-address">{{ email }}</span>
+                </div>
             </div>
         </section>
 
