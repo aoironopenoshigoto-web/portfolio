@@ -12,8 +12,9 @@ import imgPute from "@/imports/HGqz4S0a4AA1hRT.jpg";
 import imgMatsumae from "@/imports/HHeT4YVa0AA2ZrO.jpg";
 import imgMichaka from "@/imports/HIRztclawAABc3B.jpg";
 import imgKeito from "@/imports/HJKdN9qboAAG6ho.jpg";
-import imgIcyRayne from "@/imports/_IcyRayne_____Vtuber____IcyRayne____.png";
-import imgNila from "@/imports/_Nila____Nila___.png";
+import imgIcyRayne from "@/imports/_IcyRayne_____Vtuber____IcyRayne____.jpg";
+import imgNila from "@/imports/_Nila____Nila___.jpg";
+import uibunnygarden from "@/imports/HLvSJLuaAAAFA8c.jpg"
 
 // =============================================================
 // アートワーク画像の設定
@@ -130,6 +131,13 @@ const ARTWORKS = [
     title: "For Nila",
     tags: ["ご依頼", "Skeb"],
     image: imgNila,
+    wide: false,
+  },
+  {
+    id: "15",
+    title: "バニーガーデン しぐれうい様",
+    tags: ["バニーガーデン", "しぐれうい様", "二次創作"],
+    image: uibunnygarden,
     wide: false,
   },
 ];
