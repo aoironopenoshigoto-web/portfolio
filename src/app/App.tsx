@@ -12,8 +12,8 @@ import imgPute from "@/imports/HGqz4S0a4AA1hRT.jpg";
 import imgMatsumae from "@/imports/HHeT4YVa0AA2ZrO.jpg";
 import imgMichaka from "@/imports/HIRztclawAABc3B.jpg";
 import imgKeito from "@/imports/HJKdN9qboAAG6ho.jpg";
-import imgIcyRayne from "@/imports/_IcyRayne_____Vtuber____IcyRayne____.jpg";
-import imgNila from "@/imports/_Nila____Nila___.jpg";
+import imgIcyRayne from "@/imports/IcyRayne.jpg";
+import imgNila from "@/imports/Nila.jpg";
 import uibunnygarden from "@/imports/HLvSJLuaAAAFA8c.jpg"
 
 // =============================================================
@@ -23,6 +23,7 @@ import uibunnygarden from "@/imports/HLvSJLuaAAAFA8c.jpg"
 //
 // 各 artwork オブジェクトの image プロパティに定数を設定します。
 // 作品数は ARTWORKS の件数から自動で集計されます。
+
 // =============================================================
 
 // ↓ ここに Base64 画像を追加してください
