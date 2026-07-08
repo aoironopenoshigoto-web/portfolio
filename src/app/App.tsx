@@ -485,6 +485,7 @@ export default function App() {
                   position: "absolute",
                   top: 20,
                   right: 24,
+                  zIndex: 20,
                   background: "rgba(255,255,255,0.12)",
                   border: "none",
                   cursor: "pointer",
