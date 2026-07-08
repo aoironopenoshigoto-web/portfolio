@@ -486,13 +486,13 @@ export default function App() {
                   top: 20,
                   right: 24,
                   zIndex: 20,
-                  background: "rgba(255,255,255,0.12)",
-                  border: "none",
+                  background: "#ffffff",
+                  border: "2px solid #000",
                   cursor: "pointer",
                   width: 44,
                   height: 44,
                   borderRadius: "50%",
-                  color: "#fff",
+                  color: "#000",
                   fontSize: "1.3rem",
                   display: "flex",
                   alignItems: "center",
@@ -500,12 +500,10 @@ export default function App() {
                   transition: "background 0.2s",
                 }}
                 onMouseEnter={(e) =>
-                  (e.currentTarget.style.background =
-                    "rgba(196,90,255,0.5)")
+                  (e.currentTarget.style.background = "#f0f0f0")
                 }
                 onMouseLeave={(e) =>
-                  (e.currentTarget.style.background =
-                    "rgba(255,255,255,0.12)")
+                  (e.currentTarget.style.background = "#ffffff")
                 }
                 aria-label="閉じる"
               >
