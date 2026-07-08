@@ -369,6 +369,7 @@ function Bubble({
 }
 
 export default function App() {
+  const mobileGalleryQuery = "(max-width: 768px)";
   const [hoveredId, setHoveredId] = useState<string | null>(
     null,
   );
@@ -376,6 +377,58 @@ export default function App() {
   const [lightboxIndex, setLightboxIndex] = useState<
     number | null
   >(null);
+  const [isMobileGallery, setIsMobileGallery] = useState(() =>
+    window.matchMedia(mobileGalleryQuery).matches,
+  );
+  const [landscapeById, setLandscapeById] = useState<
+    Record<string, boolean>
+  >({});
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia(mobileGalleryQuery);
+    const onChange = (event: MediaQueryListEvent) =>
+      setIsMobileGallery(event.matches);
+    setIsMobileGallery(mediaQuery.matches);
+    mediaQuery.addEventListener("change", onChange);
+    return () =>
+      mediaQuery.removeEventListener("change", onChange);
+  }, []);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    const loadOrientations = async () => {
+      const results = await Promise.all(
+        ARTWORKS.filter((work) => work.image).map(
+          (work) =>
+            new Promise<[string, boolean]>((resolve) => {
+              const image = new window.Image();
+              image.onload = () => {
+                resolve([
+                  work.id,
+                  image.naturalWidth > image.naturalHeight,
+                ]);
+              };
+              image.onerror = () => resolve([work.id, false]);
+              image.src = work.image as string;
+            }),
+        ),
+      );
+
+      if (cancelled) return;
+
+      const nextLandscapeById: Record<string, boolean> = {};
+      for (const [id, isLandscape] of results) {
+        nextLandscapeById[id] = isLandscape;
+      }
+      setLandscapeById(nextLandscapeById);
+    };
+
+    loadOrientations();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -1201,42 +1254,52 @@ export default function App() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns:
-              "repeat(auto-fill, minmax(min(260px, 100%), 1fr))",
-            gap: 16,
+            gridTemplateColumns: isMobileGallery
+              ? "repeat(2, minmax(0, 1fr))"
+              : "repeat(auto-fill, minmax(min(260px, 100%), 1fr))",
+            gap: isMobileGallery ? 10 : 16,
             maxWidth: 1100,
             margin: "0 auto",
           }}
         >
-          {ARTWORKS.map((work) => (
-            <div
-              key={work.id}
-              style={{
-                borderRadius: 20,
-                overflow: "hidden",
-                aspectRatio: work.wide ? "16/9" : "3/4",
-                gridColumn: work.wide ? "span 2" : "span 1",
-                position: "relative",
-                cursor: "pointer",
-                boxShadow:
-                  hoveredId === work.id
-                    ? `0 12px 40px rgba(196,90,255,0.3)`
-                    : `0 4px 20px rgba(196,90,255,0.1)`,
-                transform:
-                  hoveredId === work.id
-                    ? "translateY(-4px) scale(1.01)"
-                    : "none",
-                transition: "transform 0.3s, box-shadow 0.3s",
-                border: `2px solid ${hoveredId === work.id ? C.purple : C.border}`,
-              }}
-              onMouseEnter={() => setHoveredId(work.id)}
-              onMouseLeave={() => setHoveredId(null)}
-              onClick={() =>
-                setLightboxIndex(
-                  ARTWORKS.findIndex((a) => a.id === work.id),
-                )
-              }
-            >
+          {ARTWORKS.map((work) => {
+            const isWideInCurrentLayout = isMobileGallery
+              ? Boolean(landscapeById[work.id])
+              : work.wide;
+
+            return (
+              <div
+                key={work.id}
+                style={{
+                  borderRadius: 20,
+                  overflow: "hidden",
+                  aspectRatio: isWideInCurrentLayout
+                    ? "16/9"
+                    : "3/4",
+                  gridColumn: isWideInCurrentLayout
+                    ? "span 2"
+                    : "span 1",
+                  position: "relative",
+                  cursor: "pointer",
+                  boxShadow:
+                    hoveredId === work.id
+                      ? `0 12px 40px rgba(196,90,255,0.3)`
+                      : `0 4px 20px rgba(196,90,255,0.1)`,
+                  transform:
+                    hoveredId === work.id
+                      ? "translateY(-4px) scale(1.01)"
+                      : "none",
+                  transition: "transform 0.3s, box-shadow 0.3s",
+                  border: `2px solid ${hoveredId === work.id ? C.purple : C.border}`,
+                }}
+                onMouseEnter={() => setHoveredId(work.id)}
+                onMouseLeave={() => setHoveredId(null)}
+                onClick={() =>
+                  setLightboxIndex(
+                    ARTWORKS.findIndex((a) => a.id === work.id),
+                  )
+                }
+              >
               <div
                 style={{
                   position: "absolute",
@@ -1332,8 +1395,9 @@ export default function App() {
               >
                 {work.id}
               </div>
-            </div>
-          ))}
+              </div>
+            );
+          })}
         </div>
       </section>
 
